@@ -7,13 +7,25 @@ Die Stammdaten werden durch die zuständige Stelle vorgegeben und bei Bedarf dur
 ==== Klasse `+Katalogeintrag+`
 Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte +Katalogeintrag+, sondern nur Objekte von den spezialisierten Klassen.
 
+
+[cols="1,1,1"]
+|===
+| Spalte 1 | Spalte 2 | Spalte 3
+
+| Text 1
+| +++<span style="color:blue;">Blauer Text</span>+++
+| <span style="color:blue;">Blauer Text</span>
+
+|===
+
+
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
 m| OID
 | technischer Objektidentifikator
 | ceaa37a9-8614-43fc-9a8b-688f95c30218
-| öffentlich
+| +++<span style="color:blue;">öffentlich</span>+++
 m| Code
 | Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
 | in_Aenderung
@@ -44,10 +56,86 @@ Die Klasse `+Ursprung+` ist eine Spezialisierung der abstrakten Klasse `+Katalog
 ==== Klasse `+Gemeinde+`
 Die Klasse `+Gemeinde+` ist eine Spezialisierung der abstrakten Klasse `+Katalogeintrag+`. Sie enthält keine weiteren Attribute.
 
-[%header, cols="10%, 10%, 10%, 60%, 10%", format=csv, separator=;]
-|=======
-include::../table/klasse_katalogeintrag.csv[]
-|=======
+=== Topic `+Verfahren+`
+Das Topic `+Verfahren+` führt alle Klassen, die für die Modellierung der Verfahren im Waldrecht benötigt werden. Die übergeordneten Verfahren sind:
+
+* Waldfeststellung
+* Rodung
+* Baugesuch
+* Grossveranstaltungen
+* Forstpolizei
+
+==== Klasse `+Verfahren+`
+Die Klasse `+Verfahren+` enthält die allgemeinen Attribute, die für sämtliche Verfahren benötigt werden. Die verfahrenspezifischen Attribute sind auf den spezialisierten Klassen modelliert.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| Kennung
+| Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
+| in_Aenderung
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| intern
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| intern
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| intern
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| intern
+m| Verfuegungsdatum
+| Datum, an dem die Verfügung erlassen wurde
+| 2018-07-30
+| öffentlich
+m| Verfuegungsnummer
+| Nummer, welche eine Verfügung kennzeichnet; im Normalfall gebildet aus Jahr, Monat, Tag und durch einen Punkt getrennte 2-stellige Laufnummer
+| 20230207.01
+| öffentlich
+m| Verfuegungslink
+| Verweis auf die Verfügungsunterlagen; Dieser Link entspricht dem `+Doklink+` bei den ÖREB-Themen
+| https://oereblex.sz.ch/api/geolinks/1305
+| öffentlich
+m| Dokumentablage
+| Pfad zur internen Dateiablage dieser Verfügung
+| I:\AWN\...
+| intern
+m| Bemerkung
+| öffentliche Bemerkung zum Objekt
+| Das ist eine öffentliche Bemerkung
+| öffentlich
+|===
+
+==== Klasse `+Waldfeststellung+`
+Die Klasse `+Waldfeststellung+` enthält die für diese Verfahrensart spezifischen Attribute. Die Klasse erbt zudem alle Attribute der Klasse `+Verfahren+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| Lokalname
+| Gebietsname, in welchem die Waldfeststellung erfolgt; dieser Name ist Bestandteil der schriftlichen Verfügung
+| Rütti
+| öffentlich
+m| verfuegtWald
+| Boolescher Wert, der angibt, ob im Rahmen dieses Verfahren Wald verfügt wird. Es ist möglich, dass im gleichen Verfahren Wald und Nichtwald verfügt wird (siehe Attribut unten).
+| ja
+| öffentlich
+m| verfuegtNichtwald
+| Boolescher Wert, der angibt, ob im Rahmen dieses Verfahren Nichtwald verfügt wird. Es ist möglich, dass im gleichen Verfahren Wald und Nichtwald verfügt wird (siehe Attribut oben).
+| ja
+| öffentlich
+|===
 
 ifdef::backend-pdf[]
 <<<
