@@ -75,10 +75,6 @@ m| OID
 | technischer Objektidentifikator
 | ceaa37a9-8614-43fc-9a8b-688f95c30218
 | öffentlich
-m| Kennung
-| Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
-| in_Aenderung
-| öffentlich
 m| erfasstVon
 | Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
 | Musterha
@@ -115,6 +111,38 @@ m| Bemerkung
 | öffentliche Bemerkung zum Objekt
 | Das ist eine öffentliche Bemerkung
 | öffentlich
+|===
+
+Die Überführung der Daten von der bestehenden Applikation ins neue Datenmodell erfolgt nach der untenstehenden Abbildung:
+
+[cols=2*,options="header"]
+|===
+| Attribut | Datenquelle
+m| OID
+| keine +
+Der Wert wird frisch vergeben
+m| erfasstVon
+| falls vorhanden: <todo> +
+Default-Wert: geoadmin
+m| erfasstAm
+| keine +
+Der Wert wird frisch vergeben: 1900-01-01T12:00:00
+m| geaendertVon
+| falls vorhanden: <todo> +
+Default-Wert: geoadmin
+m| geaendertAm
+| keine +
+Der Wert wird frisch vergeben: 1900-01-01T12:00:00
+m| Verfuegungsdatum
+| <todo>
+m| Verfuegungsnummer
+| <todo>
+m| Verfuegungslink
+| <todo>
+m| Dokumentablage
+| <todo>
+m| Bemerkung
+| <todo>
 |===
 
 ==== Klasse `+Waldfeststellung+`
