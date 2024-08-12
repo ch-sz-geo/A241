@@ -1,0 +1,33 @@
+== Klassenbeschreibung
+=== Topic `+Stammdaten+`
+Das Topic `+Stammdaten+` umfasst alle statischen Werte. Darunter fallen z.B. die Aufzählwerte von Listen (in INTERLIS wäre das der Datentyp «Aufzählung»). Jede Liste wird in einer eigenen Klasse modelliert. +
+
+Die Stammdaten werden durch die zuständige Stelle vorgegeben und bei Bedarf nachgeführt. Die Stammdaten werden durch die Abteilung Geoinformation im Internet veröffentlicht.
+
+==== Klasse `+Katalogeintrag+`
+Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt damit keine Objekte +Katalogeintrag+, sondern nur Objekte von den spezialisierten Klassen. +
+
+Allgemeingültige Attributbeschreibungen sind auf der Klasse +Katalogeintrag+ aufgeführt. Detailliertere Angaben zu den Attributen sind bei den jeweiligen Klassen zu finden.
+
+[.stripes-odd,cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| Kennung
+| eindeutiger, unveränderbarer Wert, welcher ein Objekt kennzeichnet
+| 54
+| öffentlich
+m| Name
+| Bezeichnung des Objektes
+| Himmel
+| öffentlich
+|===
+
+
+[%header, cols="10%, 10%, 10%, 60%, 10%", format=csv, separator=;]
+|=======
+include::../table/klasse_katalogeintrag.csv[]
+|=======
+
+ifdef::backend-pdf[]
+<<<
+endif::[]
