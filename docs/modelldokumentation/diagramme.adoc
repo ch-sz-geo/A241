@@ -1,9 +1,9 @@
 == Diagramme
 === Komponentendiagramm
-image::../img/SZ_Waldrecht_V1_Komponentendiagramm.png.JPG[]
+image::../img/SZ_Verfahren_Waldrecht_V1_Komponentendiagramm.png[]
 
 === Klassendiagramm
-image::../img/SZ_Waldrecht_V1_Klassendiagramm.png[]
+image::../img/SZ_Verfahren_Waldrecht_V1_Klassendiagramm.png[]
 
 ifdef::backend-pdf[]
 <<<
