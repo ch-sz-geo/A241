@@ -17,8 +17,6 @@ Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemei
 | <span style="color:blue;">Blauer Text</span>
 
 |===
-
-
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
@@ -111,6 +109,10 @@ m| Bemerkung
 | öffentliche Bemerkung zum Objekt
 | Das ist eine öffentliche Bemerkung
 | öffentlich
+m| BemerkungIntern
+| interne Bemerkung zum Objekt, die nur für die zuständige Stelle einsehbar ist
+| Das ist eine interne Bemerkung
+| intern
 |===
 
 Die Überführung der Daten von der bestehenden Applikation ins neue Datenmodell erfolgt nach der untenstehenden Abbildung:
