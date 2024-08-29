@@ -16,11 +16,7 @@ Ausarbeitung eines Geodatenmodells zuständig sind.
 ===  Zweck des Dokuments
 Dieses Dokument beschreibt den Geobasisdatensatz
  
-* *__<Name des Datensatzes>__.* +
-
-__<weitere Beschreibungen>__ +
-
-Der Geobasisdatensatz ist Bestandteil des ÖREB-Katasters. +
+* *__Verfahren Waldrecht__.* +
 
 Diese Dokumentation richtet sich an alle Personen, welche sich über dieses Thema informieren möchten.
 
