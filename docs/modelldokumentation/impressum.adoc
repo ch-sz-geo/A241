@@ -6,15 +6,15 @@
 ====
 [cols="1, 3"]
 |=======
-|Erstelldatum | 2024-01-01
+|Erstelldatum | 2024-08-06
 |letzte Änderung | {docdate}
-| Themen-Nummer | Annn
+| Themen-Nummer | A241
 | ID nach kGeoiV | --- 
-| Beteiligte | Person 1 (Kürzel 1), Amt 1 + 
-Person 2 (Kürzel 2), Amt 2
-| Status a| - [ ] Entwurf 
+| Beteiligte | Kuno Epper (Kep), Amt für Geoinformation + 
+Christoph Angst (ChA), Amt für Wald und Natur
+| Status a| - [x] Entwurf 
 - [ ] bereit für Vernehmlassung
-- [x] gültig
+- [ ] gültig
 |=======
 ====
 
