@@ -1,6 +1,6 @@
 // Hier den Titel eingeben
-:subtitle: Modelldokumentation
 :title: Verfahren Waldrecht (A241)
+:subtitle: Modelldokumentation
 ifdef::backend-pdf[]
 = {title}
 {subtitle}
