@@ -1,6 +1,30 @@
 == Modellbeschreibung
 
-<Beschreibung einfügen>
+Das kantonale Waldrecht beschreibt verschiedene Verfahren. Diese sind unter anderem:
+
+* Waldfeststellung
+* Rodungsbewilligung
+* Baugesuche
+* Grossveranstaltungen
+* usw.
+
+Das vorliegende Datenmodell wurde dazu erstellt, sämtliche Verfahren des Waldrechts abzubilden. Zum Zeitpunkt der ersten Veröffentlichung ist das **Verfahren der Waldfeststellung** fertig modelliert. Je nach Interesse des zuständigen Amtes kann das Modell mit weiteren Verfahrensarten ergänzt werden. +
+
+=== Waldfeststellungsverfahren
+Im Rahmen der Waldfeststellung wird die Grenze zwischen Wald und Nicht-Wald bestimmt. Dies erfolgt über eine Verfügung. Im Normalfall wird das Verfahren von der Gemeinde im Rahmen einer Revision eines Nutzungsplanes angestossen (Art. 10 Abs. 2 WaG). Sie meldet dem Amt für Wald und Natur (AWN) den Bedarf neuer Waldfeststellung.
+
+Paragraf 4 des kantonalen Waldgesetzes (kWaG, SRSZ 313.110) enthält die Zusammenstellung aller Verfahren, welche zu einer Waldfeststellung führen. Diese sind:
+
+* Nutzungsplan- oder Baubewilligungsverfahren
+* Nachweis eines schutzwürdigen Interesses (ausserhalb der Bauzone)
+* kantonale Richtplan (zwecks Verhinderung der Waldzunahhmen ausserhalb der Bauzone)
+
+Dieses Thema führt keine Geodaten. Es enthält einzig die Sachinformation eines Verfahrens. Die Geodaten des Waldfeststellungsverfahrens sind im Thema https://ch-sz-geo.github.io/A057/[**"Waldfeststellung (A057)"**] modelliert. Da eine Waldgrenze durch ein Verfahren neu begründet oder aufgehoben wird, ist jede Waldgrenze mit zwei Verfahren verknüpft:
+
+* eines für die Begründung und
+* eines für die Aufhebung.
+
+Die Details sind im Thema A057 beschrieben.
 
 ifdef::backend-pdf[]
 <<<
