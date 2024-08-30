@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<title>Modelldokumentation</title>
+<title>Verfahren Waldrecht (A241)</title>
 <style>
 
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";
@@ -190,7 +190,7 @@ th {
 <div id="toc" class="toc2">
 <div id="toctitle">Inhalt</div>
 <ul class="sectlevel0">
-<li><a href="#_modelldokumentation">Modelldokumentation</a>
+<li><a href="#_verfahren_waldrecht_a241">Verfahren Waldrecht (A241)</a>
 <ul class="sectlevel1">
 <li><a href="#_allgemeines">1. Allgemeines</a>
 <ul class="sectlevel2">
@@ -198,7 +198,11 @@ th {
 <li><a href="#_zweck_des_dokuments">1.2. Zweck des Dokuments</a></li>
 </ul>
 </li>
-<li><a href="#_modellbeschreibung">2. Modellbeschreibung</a></li>
+<li><a href="#_modellbeschreibung">2. Modellbeschreibung</a>
+<ul class="sectlevel2">
+<li><a href="#_waldfeststellungsverfahren">2.1. Waldfeststellungsverfahren</a></li>
+</ul>
+</li>
 <li><a href="#_diagramme">3. Diagramme</a>
 <ul class="sectlevel2">
 <li><a href="#_komponentendiagramm">3.1. Komponentendiagramm</a></li>
@@ -237,28 +241,11 @@ th {
 </div>
 </div>
 </div>
-<h1 id="_modelldokumentation" class="sect0"><a class="anchor" href="#_modelldokumentation"></a><a class="link" href="#_modelldokumentation">Modelldokumentation</a></h1>
+<h1 id="_verfahren_waldrecht_a241" class="sect0"><a class="anchor" href="#_verfahren_waldrecht_a241"></a><a class="link" href="#_verfahren_waldrecht_a241">Verfahren Waldrecht (A241)</a></h1>
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p><span class="subtitle">Verfahren Waldrecht (A241)</span><br></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://ch-sz-geo.github.io/A000_entrypage/">zur Startseite</a><br></p>
-</li>
-<li>
-<p><a href="https://amandawetter.github.io/A000_Rebuild/">Übersicht AXXX Dokumentation</a><br></p>
-</li>
-<li>
-<p><a href="https://amandawetter.github.io/A000_Rebuild/docs/modelldokumentation.pdf">Dokumentation als Pdf</a><br></p>
-</li>
-</ul>
-</div>
-</div>
+<p><span class="subtitle">Modelldokumentation</span><br></p>
 </div>
 <h3 id="_impressum" class="discrete">Impressum</h3>
 <details>
@@ -414,7 +401,67 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <h2 id="_modellbeschreibung"><a class="anchor" href="#_modellbeschreibung"></a><a class="link" href="#_modellbeschreibung">2. Modellbeschreibung</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>&lt;Beschreibung einfügen&gt;</p>
+<p>Das kantonale Waldrecht beschreibt verschiedene Verfahren. Diese sind unter anderem:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Waldfeststellung</p>
+</li>
+<li>
+<p>Rodungsbewilligung</p>
+</li>
+<li>
+<p>Baugesuche</p>
+</li>
+<li>
+<p>Grossveranstaltungen</p>
+</li>
+<li>
+<p>usw.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Das vorliegende Datenmodell wurde dazu erstellt, sämtliche Verfahren des Waldrechts abzubilden. Zum Zeitpunkt der ersten Veröffentlichung ist das <strong>Verfahren der Waldfeststellung</strong> fertig modelliert. Je nach Interesse des zuständigen Amtes kann das Modell mit weiteren Verfahrensarten ergänzt werden.<br></p>
+</div>
+<div class="sect2">
+<h3 id="_waldfeststellungsverfahren"><a class="anchor" href="#_waldfeststellungsverfahren"></a><a class="link" href="#_waldfeststellungsverfahren">2.1. Waldfeststellungsverfahren</a></h3>
+<div class="paragraph">
+<p>Im Rahmen der Waldfeststellung wird die Grenze zwischen Wald und Nicht-Wald bestimmt. Dies erfolgt über eine Verfügung. Im Normalfall wird das Verfahren von der Gemeinde im Rahmen einer Revision eines Nutzungsplanes angestossen (Art. 10 Abs. 2 WaG). Sie meldet dem Amt für Wald und Natur (AWN) den Bedarf neuer Waldfeststellung.</p>
+</div>
+<div class="paragraph">
+<p>Paragraf 4 des kantonalen Waldgesetzes (kWaG, SRSZ 313.110) enthält die Zusammenstellung aller Verfahren, welche zu einer Waldfeststellung führen. Diese sind:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nutzungsplan- oder Baubewilligungsverfahren</p>
+</li>
+<li>
+<p>Nachweis eines schutzwürdigen Interesses (ausserhalb der Bauzone)</p>
+</li>
+<li>
+<p>kantonale Richtplan (zwecks Verhinderung der Waldzunahhmen ausserhalb der Bauzone)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Dieses Thema führt keine Geodaten. Es enthält einzig die Sachinformation eines Verfahrens. Die Geodaten des Waldfeststellungsverfahrens sind im Thema <a href="https://ch-sz-geo.github.io/A057/"><strong>"Waldfeststellung (A057)"</strong></a> modelliert. Da eine Waldgrenze durch ein Verfahren neu begründet oder aufgehoben wird, ist jede Waldgrenze mit zwei Verfahren verknüpft:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>eines für die Begründung und</p>
+</li>
+<li>
+<p>eines für die Aufhebung.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Die Details sind im Thema A057 beschrieben.</p>
+</div>
 </div>
 </div>
 </div>
@@ -774,7 +821,7 @@ Der Wert wird frisch vergeben: 1900-01-01T12:00:00</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-08-30 12:05:12 UTC
+Last updated 2024-08-30 13:18:53 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
