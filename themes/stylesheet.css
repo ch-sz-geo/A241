@@ -48,7 +48,6 @@ li a:hover {
 	display: flex;
 	flex-grow: 100;
 	color: #000000;
-	margin-top: 2px;
 }
 
 /*#toc li ul.sectlevel1 li, ul.sectlevel2 li, ul.sectlevel3 li {
