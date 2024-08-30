@@ -7,7 +7,6 @@ Die Stammdaten werden durch die zuständige Stelle vorgegeben und bei Bedarf dur
 ==== Klasse `+Katalogeintrag+`
 Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte +Katalogeintrag+, sondern nur Objekte von den spezialisierten Klassen.
 
-|===
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
