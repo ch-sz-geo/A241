@@ -31,8 +31,8 @@ ifndef::env-github,backend-pdf[]
 [.img-logo]
 image:../../themes/logo_kt_sz_rgb.jpg[]
 
-= {title}
-[.subtitle]#{subtitle}# +
+= [.subtitle]#{subtitle}#
+{title} +
 
 endif::[]
 
