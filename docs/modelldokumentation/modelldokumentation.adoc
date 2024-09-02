@@ -2,8 +2,8 @@
 :title: Verfahren Waldrecht (A241)
 :subtitle: Modelldokumentation
 ifdef::backend-pdf[]
-= {title}
-{subtitle}
+= {subtitle}
+{title}
 :title-logo-image: image:../../themes/header_sz_pdf.PNG[top=-10%,align=center,width=fill]
 :pdf-theme: ../../themes/pdfTheme.yml
 :pdf-fontsdir: fonts/
