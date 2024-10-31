@@ -109,7 +109,7 @@ m| BemerkungIntern
 | +++<span style="color:red;">intern</span>+++
 4+| *Anforderungen*
 m|Kennung
-3+| Die Werte müssen eindeutig sein und dürfen nach der Vergabe nicht mehr geändert werden
+3+| Die Werte müssen eindeutig sein und dürfen nach der Vergabe nicht mehr geändert werden.
 |===
 
 Die Überführung der Daten von der bestehenden Applikation ins neue Datenmodell erfolgt nach der untenstehenden Abbildung:
@@ -120,6 +120,10 @@ Die Überführung der Daten von der bestehenden Applikation ins neue Datenmodell
 m| OID
 | keine +
 Der Wert wird frisch vergeben
+m| Kennung
+| keine +
+Neuvergabe des Wertes nach folendem Muster: 1900-01-01-<3-stellige Laufnummer> +
+Beispiel: 1900-01-01-057
 m| erfasstVon
 | falls vorhanden: <todo> +
 Default-Wert: geoadmin
