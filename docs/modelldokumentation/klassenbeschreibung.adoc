@@ -63,6 +63,10 @@ m| OID
 | technischer Objektidentifikator
 | ceaa37a9-8614-43fc-9a8b-688f95c30218
 | öffentlich
+m| Kennung
+| fachlicher Objektidentifikator; wird von der Fachperson vergeben
+| 2018-05-16-007
+| öffentlich
 m| erfasstVon
 | Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
 | Musterha
@@ -103,6 +107,9 @@ m| BemerkungIntern
 | interne Bemerkung zum Objekt, die nur für die zuständige Stelle einsehbar ist
 | Das ist eine interne Bemerkung
 | +++<span style="color:red;">intern</span>+++
+4+| *Anforderungen*
+m|Kennung
+3+| Die Werte müssen eindeutig sein und dürfen nach der Vergabe nicht mehr geändert werden
 |===
 
 Die Überführung der Daten von der bestehenden Applikation ins neue Datenmodell erfolgt nach der untenstehenden Abbildung:
