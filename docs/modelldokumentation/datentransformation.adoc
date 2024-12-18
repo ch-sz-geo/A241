@@ -11,4 +11,7 @@ Das kantonale Geodatenmodell umfasst auch die Stockgrenzen. Als Datenquelle dien
 
 * **Stockgrenze**
 
-Diese fünd Datensätze bilden den Input für die Datenübernahme ins kantonale Geodatenmodell.
+Diese fünf Datensätze bilden den Input für die Datenübernahme ins kantonale Geodatenmodell.
+
+==== Heruasforderungen
+In den ursprünglichen Daten wurden sämtliche Informationen zu Waldfeststellungen erfasst; auch von Waldfeststellungen, welche nicht verfügt wurden (Status 9). Von diesen Waldgrenzen sind zwar sämtliche Informationen vorhanden, sie werden jedoch nicht veröffentlicht. Damit auch diese Daten übernommen werden könnne, wird ein neuer Verfahrenstyp "intern" geschaffen. Er dient dazu, alle bestehenden Informationen verlustfrei zu migrieren. Zudem sollen die Waldgrenzen, welche dem Verfahrenstyp "intern" zugeordnet sind, NICHT ins WebGIS publiziert werden.
