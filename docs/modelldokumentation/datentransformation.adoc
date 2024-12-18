@@ -1,5 +1,5 @@
 == Datentransformation
-=== vom Erfassungssystem zum Geodatenmodell
+=== Transformation vom Erfassungssystem zum Geodatenmodell
 Vor der Überführung der Daten ins neue kantonalen Geodatenmodell wurden die Informationen zu den Waldfeststellungen in verschiedenen Dateien gehalten. Diese waren:
 
 * **Waldfeststellungen.accdb:** MS Access-Datenbank mit Angaben zu den Waldfeststellungen, Status und Parzelleninformationen; geometrielos
@@ -13,5 +13,38 @@ Das kantonale Geodatenmodell umfasst auch die Stockgrenzen. Als Datenquelle dien
 
 Diese fünf Datensätze bilden den Input für die Datenübernahme ins kantonale Geodatenmodell.
 
-==== Heruasforderungen
-In den ursprünglichen Daten wurden sämtliche Informationen zu Waldfeststellungen erfasst; auch von Waldfeststellungen, welche nicht verfügt wurden (Status 9). Von diesen Waldgrenzen sind zwar sämtliche Informationen vorhanden, sie werden jedoch nicht veröffentlicht. Damit auch diese Daten übernommen werden könnne, wird ein neuer Verfahrenstyp "intern" geschaffen. Er dient dazu, alle bestehenden Informationen verlustfrei zu migrieren. Zudem sollen die Waldgrenzen, welche dem Verfahrenstyp "intern" zugeordnet sind, NICHT ins WebGIS publiziert werden.
+==== Details zum Waldfeststellungs-Status
+**Attributbezeichnung**
+Access-Formular: WFStatus
+Access-Tabelle: Waldfeststellungen.WF_Status
+
+**Wertebereiche**
+[cols=3*,options="header"]
+|===
+| Code | Bezeichnung | Regel für die Datenübernahme
+| 0
+| provisorisch, noch nicht verfügt (ÖREB: "laufende Änderung")
+| Die Daten werden übernommen. Das Begründungsverfahren weist den Status "eingeleitet" auf. Dadurch wird angezeigt, dass das Verfahren angestossen, jedoch noch nicht abgeschlossen ist.
+| 1
+| verfügt (ÖREB: "in Kraft")
+| Die Daten werden übernommen. Das Begründungsverfahren ist abgeschlossen.
+| 2
+| ersetzt
+| Die Daten werden übernommen. Das Begründungsverfahren wie auch das Aufhebungsverfahren sind abgeschlossen.
+| 3
+| altrechtlich
+| Die Daten werden übernommen. Das Begründungsverfahren ist abgeschlossen. In die Bemerkung wird der Satz "altrechtliche Festsetzung" eingetragen.
+| 4
+| brieflich
+| Die Daten werden übernommen. Das Begründungsverfahren ist abgeschlossen. Briefliche Festlegungen sind Abmachungen zwischen dem Amt und den Betroffenen, in welchen der Waldgrenzverlauf festgehalten wird. Die Daten sind intern und bleiben unveröffentlicht. Daher wird dem brieflichen Waldfeststellungsstaus das Leitverfahren "intern" zugeordnet. Waldgrenzen, die dem internen Leitverfahren zugeordnet sind, bleiben intern und werden nicht veröffentlicht. +
+Folgende Werte werden ins Bemerkungsfeld eingetragen: `+Waldfeststellungen.Verfügungsdatum+` (=Versanddatum des Briefes) und `+Waldfeststellungen.VerfügungsNr+`. +
+Bei internen Verfahren bleibt das Verfügungsdatum leer.
+| 5
+| verfügt (ausserhalb der Bauzone)
+| Die Daten werden übernommen. Das Begründungsverfahren ist abgeschlossen.
+| 9
+| nicht verfügt
+| Die Daten werden übernommen. Das Begründungsverfahren ist abgeschlossen und erhält den Status "intern".
+|===
+
+Zum Status 3 ("altrechtlich"), sind keine Daten vorhanden. Er bleibt in der oben aufgeführten Zusammenstellung unberücksichtigt.
