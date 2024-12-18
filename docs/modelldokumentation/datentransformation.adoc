@@ -1,0 +1,14 @@
+== Datentransformation
+=== vom Erfassungssystem zum Geodatenmodell
+Vor der Überführung der Daten ins neue kantonalen Geodatenmodell wurden die Informationen zu den Waldfeststellungen in verschiedenen Dateien gehalten. Diese waren:
+
+* **Waldfeststellungen.accdb:** MS Access-Datenbank mit Angaben zu den Waldfeststellungen, Status und Parzelleninformationen; geometrielos
+* **Waldgrenze_Linie.gpkg:** Geopackage mit den für die WebGIS-Publikaiton aufbereiteten Geometrien der Waldgrenzen; als Quelle dient die Datei **WaldgrenzenKtSZ.gpkg**
+* **Waldgrenze_Wirkbereich.gpkg:** Geopackage mit den für die WebGIS-Publikaiton aufbereiteten Geometrien der Wirkflächen; als Quelle dient die Datei **WaldgrenzenKtSZ_Wirkbereich.gpkg**
+* **WaldgrenzenKtSZ_ersetzt.gpkg:** Geopackage mit Waldgrenzen, welche ersetzt wurden
+
+Das kantonale Geodatenmodell umfasst auch die Stockgrenzen. Als Datenquelle dient der im WebGIS publizierte Datensatz
+
+* **Stockgrenze**
+
+Diese fünd Datensätze bilden den Input für die Datenübernahme ins kantonale Geodatenmodell.
