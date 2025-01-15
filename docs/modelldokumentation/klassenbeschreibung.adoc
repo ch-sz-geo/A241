@@ -5,7 +5,7 @@ Das Topic `+Stammdaten+` umfasst alle statischen Werte. Darunter fallen z.B. die
 Die Stammdaten werden durch die zuständige Stelle vorgegeben und bei Bedarf durch die Abteilung Geoinformation nachgeführt und . Die Stammdaten werden durch die Abteilung Geoinformation im Internet veröffentlicht.
 
 ==== Klasse `+Katalogeintrag+`
-Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte +Katalogeintrag+, sondern nur Objekte von den spezialisierten Klassen.
+Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte `+Katalogeintrag+`, sondern nur Objekte von den spezialisierten Klassen.
 
 [cols=4*,options="header"]
 |===
