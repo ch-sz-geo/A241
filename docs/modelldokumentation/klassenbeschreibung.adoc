@@ -74,7 +74,7 @@ m| erfasstVon
 m| erfasstAm
 | Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
 | 1980-03-21T15:38:12
-| +++<span style="color:red;">intern</span>+++
+| öffentlich
 m| geaendertVon
 | Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
 | Muelleran
@@ -82,7 +82,7 @@ m| geaendertVon
 m| geaendertAm
 | Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
 | 2024-07-30T08:07:57
-| +++<span style="color:red;">intern</span>+++
+| öffentlich
 m| Verfuegungsdatum
 | Datum, an dem die Verfügung erlassen wurde
 | 2018-07-30
