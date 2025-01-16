@@ -13,7 +13,7 @@ Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemei
 m| OID
 | technischer Objektidentifikator
 | ceaa37a9-8614-43fc-9a8b-688f95c30218
-| +++<span style="color:blue;">öffentlich</span>+++
+| öffentlich
 m| Code
 | Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
 | in_Aenderung
