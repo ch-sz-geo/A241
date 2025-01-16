@@ -137,15 +137,15 @@ m| geaendertAm
 | keine +
 Der Wert wird frisch vergeben: 1900-01-01T12:00:00
 m| Verfuegungsdatum
-| <todo>
+| Die ersten 10 Zeichen von `+Waldfeststellungen.Verfügungsdatum+`
 m| Verfuegungsnummer
-| <todo>
+| `+Waldfeststellungen.VerfügungsNr+`
 m| Verfuegungslink
-| <todo>
+| https://oereblex.sz.ch/api/geolinks/@Value(`+Waldfeststellungen.Geolink_für_ÖREB+`)
 m| Dokumentablage
-| <todo>
+| `+Waldfeststellungen.AblageOrdner_Server+`
 m| Bemerkung
-| <todo>
+| `+Waldfeststellungen.Bemerkungen+`
 |===
 
 ==== Klasse `+Waldfeststellung+`
