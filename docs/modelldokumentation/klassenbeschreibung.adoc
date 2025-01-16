@@ -141,7 +141,7 @@ m| Verfuegungsdatum
 m| Verfuegungsnummer
 | `+Waldfeststellungen.VerfügungsNr+`
 m| Verfuegungslink
-| https://oereblex.sz.ch/api/geolinks/@Value(`+Waldfeststellungen.Geolink_für_ÖREB+`)
+| https://oereblex.sz.ch/api/geolinks/`+Waldfeststellungen.Geolink_für_ÖREB+`
 m| Dokumentablage
 | `+Waldfeststellungen.AblageOrdner_Server+`
 m| Bemerkung
