@@ -1,7 +1,7 @@
 // Erklärung und Link auf Website
 ifdef::env-github[]
 [discrete]
-= Verfahren Waldrecht (A241)
+= Verfahren Waldrecht (A241) Test
 Sie befinden sich auf der Startseite des Themas **"Verfahren Waldrecht (A241)"**. Über folgende Links gelangen Sie zu weiteren Informationen:
 
 * https://ch-sz-geo.github.io/A241/[Daten, Datenmodell, Modellbeschreibung, Erfassungsrichtlinie usw.] zu diesem Thema
