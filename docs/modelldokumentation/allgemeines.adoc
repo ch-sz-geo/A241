@@ -1,4 +1,4 @@
-== Allgemeines (Test)
+== Allgemeines
 === Rechtliche Grundlagen
 //Todo Links und Anhänge definieren 
 Seit dem 1. Juli 2008 ist das https://www.fedlex.admin.ch/eli/cc/2008/388/de[Bundesgesetz über Geoinformation (GeoIG)] in Kraft. Am 1. Juli 2012
