@@ -9,7 +9,11 @@ on:
     paths:
       - 'docs/*'
       - 'themes/*'
+      - 'docs/modelldokumentation/*'
+      - 'docs/erfassungsrichtlinien/*'
+      - 'docs/img/*'
       - 'index.html'
+      
   pull_request:
     branches: [ master, main ]
   
