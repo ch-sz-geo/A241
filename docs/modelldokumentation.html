@@ -198,9 +198,14 @@ th {
 <li><a href="#_zweck_des_dokuments">1.2. Zweck des Dokuments</a></li>
 </ul>
 </li>
-<li><a href="#_modellbeschreibung">2. Modellbeschreibung</a>
+<li><a href="#_datentransformation">2. Datentransformation</a>
 <ul class="sectlevel2">
-<li><a href="#_waldfeststellungsverfahren">2.1. Waldfeststellungsverfahren</a></li>
+<li><a href="#_transformation_vom_erfassungssystem_zum_geodatenmodell">2.1. Transformation vom Erfassungssystem zum Geodatenmodell</a>
+<ul class="sectlevel3">
+<li><a href="#_details_zum_waldfeststellungs_status">2.1.1. Details zum Waldfeststellungs-Status</a></li>
+</ul>
+</li>
+<li><a href="#_waldfeststellungsverfahren">2.2. Waldfeststellungsverfahren</a></li>
 </ul>
 </li>
 <li><a href="#_diagramme">3. Diagramme</a>
@@ -263,7 +268,7 @@ th {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">letzte Änderung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-08-30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2025-01-16</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Themen-Nummer</p></td>
@@ -398,8 +403,109 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_modellbeschreibung"><a class="anchor" href="#_modellbeschreibung"></a><a class="link" href="#_modellbeschreibung">2. Modellbeschreibung</a></h2>
+<h2 id="_datentransformation"><a class="anchor" href="#_datentransformation"></a><a class="link" href="#_datentransformation">2. Datentransformation</a></h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_transformation_vom_erfassungssystem_zum_geodatenmodell"><a class="anchor" href="#_transformation_vom_erfassungssystem_zum_geodatenmodell"></a><a class="link" href="#_transformation_vom_erfassungssystem_zum_geodatenmodell">2.1. Transformation vom Erfassungssystem zum Geodatenmodell</a></h3>
+<div class="paragraph">
+<p>Vor der Überführung der Daten ins neue kantonalen Geodatenmodell wurden die Informationen zu den Waldfeststellungen in verschiedenen Dateien gehalten. Diese waren:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Waldfeststellungen.accdb:</strong> MS Access-Datenbank mit Angaben zu den Waldfeststellungen, Status und Parzelleninformationen; geometrielos</p>
+</li>
+<li>
+<p><strong>Waldgrenze_Linie.gpkg:</strong> Geopackage mit den für die WebGIS-Publikaiton aufbereiteten Geometrien der Waldgrenzen; als Quelle dient die Datei <strong>WaldgrenzenKtSZ.gpkg</strong></p>
+</li>
+<li>
+<p><strong>Waldgrenze_Wirkbereich.gpkg:</strong> Geopackage mit den für die WebGIS-Publikaiton aufbereiteten Geometrien der Wirkflächen; als Quelle dient die Datei <strong>WaldgrenzenKtSZ_Wirkbereich.gpkg</strong></p>
+</li>
+<li>
+<p><strong>WaldgrenzenKtSZ_ersetzt.gpkg:</strong> Geopackage mit Waldgrenzen, welche ersetzt wurden</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Das kantonale Geodatenmodell umfasst auch die Stockgrenzen. Als Datenquelle dient der im WebGIS publizierte Datensatz</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Stockgrenze</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Diese fünf Datensätze bilden den Input für die Datenübernahme ins kantonale Geodatenmodell.</p>
+</div>
+<div class="sect3">
+<h4 id="_details_zum_waldfeststellungs_status"><a class="anchor" href="#_details_zum_waldfeststellungs_status"></a><a class="link" href="#_details_zum_waldfeststellungs_status">2.1.1. Details zum Waldfeststellungs-Status</a></h4>
+<div class="paragraph">
+<p><strong>Attributbezeichnung</strong>
+Access-Formular: WFStatus
+Access-Tabelle: Waldfeststellungen.WF_Status</p>
+</div>
+<div class="paragraph">
+<p><strong>Wertebereiche</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Bezeichnung</th>
+<th class="tableblock halign-left valign-top">Regel für die Datenübernahme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">provisorisch, noch nicht verfügt (ÖREB: "laufende Änderung")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Daten werden übernommen. Das Begründungsverfahren weist den Status "eingeleitet" auf. Dadurch wird angezeigt, dass das Verfahren angestossen, jedoch noch nicht abgeschlossen ist.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verfügt (ÖREB: "in Kraft")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Daten werden übernommen. Das Begründungsverfahren ist abgeschlossen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ersetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Daten werden übernommen. Das Begründungsverfahren wie auch das Aufhebungsverfahren sind abgeschlossen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">altrechtlich</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Daten werden übernommen. Das Begründungsverfahren ist abgeschlossen. In die Bemerkung wird der Satz "altrechtliche Festsetzung" eingetragen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">brieflich</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Daten werden übernommen. Das Begründungsverfahren ist abgeschlossen. Briefliche Festlegungen sind Abmachungen zwischen dem Amt und den Betroffenen, in welchen der Waldgrenzverlauf festgehalten wird. Die Daten sind intern und bleiben unveröffentlicht. Daher wird dem brieflichen Waldfeststellungsstaus das Leitverfahren "intern" zugeordnet. Waldgrenzen, die dem internen Leitverfahren zugeordnet sind, bleiben intern und werden nicht veröffentlicht.<br>
+Folgende Werte werden ins Bemerkungsfeld eingetragen: <code>Waldfeststellungen.Verfügungsdatum</code> (=Versanddatum des Briefes) und <code>Waldfeststellungen.VerfügungsNr</code>.<br>
+Bei internen Verfahren bleibt das Verfügungsdatum leer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verfügt (ausserhalb der Bauzone)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Daten werden übernommen. Das Begründungsverfahren ist abgeschlossen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nicht verfügt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Daten werden übernommen. Das Begründungsverfahren ist abgeschlossen und erhält den Status "intern".</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Zum Status 3 ("altrechtlich"), sind keine Daten vorhanden. Er bleibt in der oben aufgeführten Zusammenstellung unberücksichtigt.
+== Modellbeschreibung</p>
+</div>
 <div class="paragraph">
 <p>Das kantonale Waldrecht beschreibt verschiedene Verfahren. Diese sind unter anderem:</p>
 </div>
@@ -425,8 +531,10 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <div class="paragraph">
 <p>Das vorliegende Datenmodell wurde dazu erstellt, sämtliche Verfahren des Waldrechts abzubilden. Zum Zeitpunkt der ersten Veröffentlichung ist das <strong>Verfahren der Waldfeststellung</strong> fertig modelliert. Je nach Interesse des zuständigen Amtes kann das Modell mit weiteren Verfahrensarten ergänzt werden.<br></p>
 </div>
+</div>
+</div>
 <div class="sect2">
-<h3 id="_waldfeststellungsverfahren"><a class="anchor" href="#_waldfeststellungsverfahren"></a><a class="link" href="#_waldfeststellungsverfahren">2.1. Waldfeststellungsverfahren</a></h3>
+<h3 id="_waldfeststellungsverfahren"><a class="anchor" href="#_waldfeststellungsverfahren"></a><a class="link" href="#_waldfeststellungsverfahren">2.2. Waldfeststellungsverfahren</a></h3>
 <div class="paragraph">
 <p>Im Rahmen der Waldfeststellung wird die Grenze zwischen Wald und Nicht-Wald bestimmt. Dies erfolgt über eine Verfügung. Im Normalfall wird das Verfahren von der Gemeinde im Rahmen einer Revision eines Nutzungsplanes angestossen (Art. 10 Abs. 2 WaG). Sie meldet dem Amt für Wald und Natur (AWN) den Bedarf neuer Waldfeststellung.</p>
 </div>
@@ -500,29 +608,8 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <div class="sect3">
 <h4 id="_klasse_katalogeintrag"><a class="anchor" href="#_klasse_katalogeintrag"></a><a class="link" href="#_klasse_katalogeintrag">4.1.1. Klasse <code>Katalogeintrag</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Katalogeintrag</code> enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte Katalogeintrag, sondern nur Objekte von den spezialisierten Klassen.</p>
+<p>Die Klasse <code>Katalogeintrag</code> enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte <code>Katalogeintrag</code>, sondern nur Objekte von den spezialisierten Klassen.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Spalte 1</th>
-<th class="tableblock halign-left valign-top">Spalte 2</th>
-<th class="tableblock halign-left valign-top">Spalte 3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Text 1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:blue;">Blauer Text</span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;span style="color:blue;"&gt;Blauer Text&lt;/span&gt;</p></td>
-</tr>
-</tbody>
-</table>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -649,28 +736,34 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fachlicher Objektidentifikator; wird von der Fachperson vergeben</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2018-05-16-007</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Verfuegungsdatum</code></p></td>
@@ -694,7 +787,7 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Dokumentablage</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Pfad zur internen Dateiablage dieser Verfügung</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">I:\AWN...</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
@@ -706,7 +799,14 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>BemerkungIntern</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">interne Bemerkung zum Objekt, die nur für die zuständige Stelle einsehbar ist</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine interne Bemerkung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Anforderungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein und dürfen nach der Vergabe nicht mehr geändert werden.</p></td>
 </tr>
 </tbody>
 </table>
@@ -729,6 +829,12 @@ Ausarbeitung eines Geodatenmodells zuständig sind.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">keine<br>
 Der Wert wird frisch vergeben</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">keine<br>
+Neuvergabe des Wertes nach folendem Muster: 1900-01-01-&lt;3-stellige Laufnummer&gt;<br>
+Beispiel: 1900-01-01-057</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
@@ -821,7 +927,7 @@ Der Wert wird frisch vergeben: 1900-01-01T12:00:00</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-08-30 13:18:53 UTC
+Last updated 2025-01-16 15:07:51 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
