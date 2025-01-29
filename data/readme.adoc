@@ -2,15 +2,8 @@
 
 [cols=*,options="header"]
 |===
-| Dateiname | Beschreibung | Modell | gültig ab | gültig bis
-| *Stammdaten_2024-06-06.xtf*
-| Diese Datei enthält die Stammdaten, welche für die publizierten Daten gelten. Die Datei wurde am 6. Juni 2024 erstellt.
-| todo
-| todo
-| todo
-| *Stammdaten_2025-01-17.xtf*
-| Diese Datei enthält die Stammdaten, welche aktuell gültig sind. Unterschied zur Vorversion: Der Wert für die BID folgt neu dem Standard.
-| todo
-| todo
-| todo
+| Dateiname | Beschreibung | Modell (Version)
+| *Stammdaten_2000-01-01.xtf*
+| Diese Datei enthält die Stammdaten, welche für die publizierten Daten gelten. Die Datei wurde am 29. Januar 2025.
+| SZ_Verfahren_Waldrecht_V1 (2024-07-29)
 |===
