@@ -24,7 +24,11 @@ Dieses Thema führt keine Geodaten. Es enthält einzig die Sachinformation eines
 * eines für die Begründung und
 * eines für die Aufhebung.
 
-Die Details sind im Thema A057 beschrieben.
+Ein Verfahren durchläuft verschiedene Phasen. Sie sind über das Attribut `+Verfahrensstatus+` gekennzeichnet. Zu einem bestimmten Verfahrensstatus sind bestimmte Attribute der Klasse `+Waldfeststellung+` einzutragen. Wird z.B. ein neues Verfahren gestartet, werden neben den automatisch nachgeführten Attributen (`+erfasstVon+`, `+erfasstAm+`, `+geändertVon+`, `+geändertAm+`) auch die `+Kennung+`, der `+Lokalname+` und die Verfügungsart (`+verfuegtWald+`, `+verfügtNichtwald+`) eingetragen. Die anderen Attribute hingegen bleiben noch leer. Das Verfahren erhält den Status "eingeleitet". Der Übergang von der Phase "eingeleitet" zur nächsten Phase "in öffentlicher Auflage" wird dadurch gekennzeichnet, dass der Wert für das Attribut `+Auflagebeginn+` gesettzt wird (vgl. Abbildung unten).
+
+image::../img/Verfahren.jpg[]
+
+Sollte das Verfahren abgebrochen werden, kann zu irgendeinem Zeitpunkt der Verfahrensstatus "abgeschlossen ohne Verfügung" gesetzt werden. Dieser Status kennzeichnet, dass das Verfahren nicht mehr am Laufen ist, dass jedoch auch keine Verfügung erlassen wurde und dass das Verfahren damit ein ausergewöhnlihcer Abschluss fand.
 
 ifdef::backend-pdf[]
 <<<
