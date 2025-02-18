@@ -1,9 +1,14 @@
 = Dateibeschreibung
 
+Die Datei `+Stammdaten.xtf+` enthält die Stammdaten. Alle Änderungen an dieser Datei werden dort vorgenommen und über GitHub mit einer eindeutigen Identifikationsnummer (Commit-Hash-ID) versehen. Mithilfe dieser ID können frühere Versionen der Datei jederzeit abgerufen werden.
+
+Die folgende Tabelle fasst die relevanten Versionen der Stammdaten zusammen:
+
 [cols=*,options="header"]
 |===
-| Dateiname | Beschreibung | Modell (Version)
-| *Stammdaten_2000-01-01.xtf*
-| Diese Datei enthält die Stammdaten, welche für die publizierten Daten gelten. Die Datei wurde am 29. Januar 2025.
+| Dateiname | Beschreibung | Modell (Version) | aktuell
+| https://raw.githubusercontent.com/ch-sz-geo/A241/main/data/Stammdaten.xtf[*Stammdaten.xtf*]
+| Diese Datei enthält die aktuell gültigen Stammdaten für die Datenerfassung.
 | SZ_Verfahren_Waldrecht_V1 (2024-07-29)
+^a| ✅
 |===
