@@ -1,4 +1,4 @@
-:title: <Themenname> (<Themennummer>)
+:title: Verfahren Waldrecht (A241)
 :subtitle: Modelldokumentation
 ifdef::backend-pdf[]
 = {title}
